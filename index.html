@@ -191,8 +191,9 @@ function p(x){return String(x).padStart(2,'0')}
 function tick(){
   var d=target-new Date();
   if(d<=0){document.querySelector('.count').style.display='none';
-    document.getElementById('cap').textContent='It’s officially one week. Happy one week, Rai.';return;}
-  document.getElementById('h').textContent=p(Math.floor(d/36e5));
+    document.getElementById('cap').textContent='Happy two weeks, Rai.';return;}
+  document.getElementById('d').textContent=p(Math.floor(d/864e5));
+  document.getElementById('h').textContent=p(Math.floor(d%864e5/36e5));
   document.getElementById('m').textContent=p(Math.floor(d%36e5/6e4));
   document.getElementById('s').textContent=p(Math.floor(d%6e4/1e3));
 }
